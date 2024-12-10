@@ -1,0 +1,9 @@
+/*   
+    COMP 2681 Final Project
+    Author: Sharabhoj Iyengar
+    Filename: styles.css
+*/
+
+.active {
+    border-bottom: 4px solid red;
+}

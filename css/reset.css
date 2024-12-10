@@ -1,0 +1,43 @@
+/*   
+    COMP 2681 Final Project
+    Author: Sharabhoj Iyengar
+    Filename: reset.css
+*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, p, 
+blockquote, a, address, big, cite, em, img, 
+strike, strong, center, dl, dt, dd, ol, ul, 
+li, fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, figure, figcaption, footer, 
+header, menu, nav, output, section, summary, 
+time, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;  
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2 em;
+}
+ol, ul {
+	list-style: none;
+    list-style-image: none;
+}
+blockquote, q {
+	quotes: "" "";
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
