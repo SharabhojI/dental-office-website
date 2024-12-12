@@ -1,0 +1,95 @@
+/*   
+    COMP 2681 Final Project
+    Author: Sharabhoj Iyengar
+    Filename: form.css
+*/
+
+div#infoSection {
+    width: 50%;
+}
+
+div#infoSection h2 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    color: white;
+}
+
+form > fieldset {
+    background-color: olive;
+    border-radius: 15px;
+    -webkit-flex: 1 1 400px;
+    flex: 1 1 400px;
+    font-size: 1em;
+    padding: 20px;
+    margin: 20px;
+}
+
+div.formEntry {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin: 8px;
+}
+
+div.formEntry > * {
+    -webkit-flex: 1 1 200px;
+    flex: 1 1 200px;
+}
+
+div#buttons {
+    text-align: center;
+    width: 100%;
+}
+
+input[type='submit'] {
+    background-color: cadetblue;
+}
+
+input[type='reset'] {
+    background-color: crimson;
+}
+
+input[type='submit'], input[type='reset'] {
+    font-size: 1.2em;
+    padding: 10px;
+    margin: 15px;
+    color: aliceblue;
+} 
+
+input:focus, select:focus, textarea:focus {
+    background-color: orange;
+}
+
+input#fName:focus:valid,
+input#lName:focus:valid,
+input#phone:focus:valid,
+input#email:focus:valid {
+    background-color: greenyellow;
+}
+
+input#fName:focus:invalid,
+input#lName:focus:invalid,
+input#phone:focus:invalid,
+input#email:focus:invalid {
+    background-color: red;
+}
+
+legend {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+}
+
+textarea {
+    margin-top: 1px;
+    height: 100px;
+    width: 100%;
+}

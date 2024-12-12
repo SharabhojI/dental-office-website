@@ -10,22 +10,77 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Example Dental Office</title>
         <link href="../css/reset.css" rel="stylesheet" />
-        <link href="../css/styles.css" rel="stylesheet" />        
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/form.css" rel="stylesheet" />       
     </head>
 
     <body>
         <header>
+            <a href="index.html"><img src="../media/example_logo_transparent.png" alt="Example Logo" /></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Our Services</a></li>
                     <li><a class="active" href="contact.html">Contact Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Home</a></li>
                 </ul>
             </nav>
         </header>
 
+        <section id="contactSection">
+            <div id="officeHours">
+                <h2>Hours Of Operation</h2>
+                <p>Monday: 9:00 am - 7:00 pm</p> 
+                <p>Tuesday: 9:00 am - 7:00 pm</p> 
+                <p>Wednesday: 9:00 am - 7:00 pm</p> 
+                <p>Thursday: 9:00 am - 7:00 pm</p> 
+                <p>Friday: 10:00 am - 5:00 pm</p> 
+                <p>Saturday: 12:00 pm - 4:00 pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+
+            <div id="infoSection">
+                <h2>Send us an Email</h2>
+                <form class="contactForm">
+                    <fieldset id="patientInfo">
+                        <legend>Patient Information</legend>
+    
+                        <div class="formEntry">
+                            <label for="fName">First Name (*)</label>
+                            <input name="firstName" id="fName" type="text" placeholder="Enter your first name" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="lName">Last Name (*)</label>
+                            <input name="lastName" id="lName" type="text" placeholder="Enter your last name" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="phone">Phone Number (*)</label>
+                            <input name="patientPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="email">Email</label>
+                            <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
+                        </div>
+    
+                        (*) indicates a required field
+                    </fieldset>
+                    <fieldset id="patientFeedback">
+                        <legend>Feedback</legend>
+                        <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
+                        <textarea name="userExp" id="infoBox"></textarea>            
+                    </fieldset>
+                </form>
+                <div id="buttons">
+                    <input type="submit" value="Submit Details" />
+                    <input type="reset" value="Cancel Details" />
+                </div>
+            </div>
+        </section>
+
         <footer>
+            <div>
+                <a href="index.html"><img src="../media/example_logo_transparent.png" alt="Example Logo" /></a>
+            </div>
             <div>
                 <h4>Example Dental Office</h4>
                 <p>123 Example Ave.</p> 
@@ -34,13 +89,22 @@
             </div>
             <div>
                 <h4>Hours Of Operation</h4>
-                <p>Monday: </p> 
-                <p>Tuesday: </p>
-                <p>Wednesday: </p> 
-                <p>Thursday: </p>
-                <p>Friday: </p> 
-                <p>Saturday: </p>
-                <p>Sunday: </p>
+                <p>Monday: 9:00 am - 7:00 pm</p> 
+                <p>Tuesday: 9:00 am - 7:00 pm</p> 
+                <p>Wednesday: 9:00 am - 7:00 pm</p> 
+                <p>Thursday: 9:00 am - 7:00 pm</p> 
+                <p>Friday: 10:00 am - 5:00 pm</p> 
+                <p>Saturday: 12:00 pm - 4:00 pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
             </div>
         </footer>
     </body>

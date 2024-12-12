@@ -4,6 +4,73 @@
     Filename: styles.css
 */
 
+html {
+    background-color: whitesmoke;
+}
+
+body {
+    background-color: blanchedalmond;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70%;
+}
+
+header {    
+    background-color: rgba(64, 64, 182, 0.507);
+}
+
+header img {
+    height: 100px;
+    float: left;
+}
+
+header::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+footer {
+    background-color: cornsilk;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer img {
+    margin-top: 40px;
+    height: 100px;
+}
+
+footer h4 {
+    color: brown;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
 .active {
     border-bottom: 4px solid red;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    padding-top: 30px;
+    float: right;
+}
+
+nav ul li a {
+    display: block;
+    color: beige;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: aqua;
 }
