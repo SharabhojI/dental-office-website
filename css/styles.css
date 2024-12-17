@@ -79,6 +79,10 @@ nav ul li a:hover, .dropdown a:hover,
     float: right;
 }
 
+.dropdown > li a::after {
+    content: " ⮟";
+}
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -112,12 +116,12 @@ section h1 {
     margin: auto auto 20px;
 }
 
-section h2 {
+section > h2 {
     font-size: 1.6em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: auto 80px 20px;
-    color: gray;
     text-align: center;
+    color: gray;
 }
 
 .body-content {
@@ -138,6 +142,10 @@ section h2 {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
+}
+
+.links a:hover {
+    background-color: rgb(107, 26, 26);
 }
 
 .body-content p {
@@ -182,6 +190,42 @@ blockquote {
 
 .employee-info {
     flex: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: gray;
+    padding: 20px;
+    color: white;
+}
+
+.grid-item h3 {
+    color: wheat;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.grid-item a {
+    color: wheat;
+    font-size: 0.8em;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.grid-item a:hover {
+    color: brown;
+    font-size: 0.9em;
+}
+
+.grid-item a::after {
+    content: " ➤";
 }
 
 footer {
