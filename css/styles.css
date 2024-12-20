@@ -24,7 +24,8 @@ body {
 
 header {    
     background-color: rgb(122, 87, 250);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2em;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -158,11 +159,12 @@ section > h2 {
     left: 10%;
     text-decoration: none;
     color: white;
+    font-size: 1em;
 }
 
 .image-text h3 {
     font-size: 1.2em;
-    color: beige;
+    color: rgb(182, 102, 65);
 }
 
 .image-text p {
@@ -196,8 +198,9 @@ section > h2 {
     transition: 1s ease;
 }
 
-.body-content p {
+.body-content > p {
     margin-bottom: 20px;
+    font-size: 1.2em;
 }
 
 .split-content {
@@ -208,8 +211,13 @@ section > h2 {
     gap: 40px;
 }
 
-.side-image {
-    display: block;
+.split-content .body-content {
+    width: auto;
+    margin: 0;
+}
+
+#side-video video{
+    max-width: 400px;
 }
 
 .side-image img {
@@ -238,6 +246,7 @@ blockquote {
 
 .employee-info {
     flex: 1;
+    font-size: 1.2em;
 }
 
 .grid-container {
@@ -333,11 +342,21 @@ footer img {
 
 footer h4 {
     color: brown;
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-bottom: 10px;
 }
 
-footer a {
+footer p {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
+footer li {
+    font-size: 1.2em;
+    margin-bottom: 4px;
+}
+
+footer a {    
     text-decoration: none;
     color: gray;
 }

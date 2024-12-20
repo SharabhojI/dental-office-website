@@ -8,9 +8,10 @@
         -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Example Dental Office</title>
+        <title>Contact Us</title>
         <link href="../css/reset.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
+        <link href="../css/table.css" rel="stylesheet" />
         <link href="../css/form.css" rel="stylesheet" />       
     </head>
 
@@ -45,19 +46,60 @@
 
         <section id="contactSection">
             <div class="split-content">
-                <div id="officeHours">
-                    <h2>Hours Of Operation</h2>
-                    <p>Monday: 9:00 am - 7:00 pm</p> 
-                    <p>Tuesday: 9:00 am - 7:00 pm</p> 
-                    <p>Wednesday: 9:00 am - 7:00 pm</p> 
-                    <p>Thursday: 9:00 am - 7:00 pm</p> 
-                    <p>Friday: 10:00 am - 5:00 pm</p> 
-                    <p>Saturday: 12:00 pm - 4:00 pm</p>
-                    <p>Sunday: Closed</p>
+                <div class="body-content">
+                    <h1>Our Schedule</h1>
+                    <table class="schedule">
+                        <colgroup>
+                            <col class="dayColumn" />
+                            <col class="hourColumn" />
+                        </colgroup>
+                        <caption><em>All times EST</em></caption>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Hours</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th colspan="2">Please note that hours may differ during holidays.</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>Monday</th>
+                                <td>9:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Tuesday</th>
+                                <td>9:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Wednesday</th>
+                                <td>9:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Thursday</th>
+                                <td>9:00 am - 7:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Friday</th>
+                                <td>10:00 am - 5:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Saturday</th>
+                                <td>12:00 pm - 4:00 pm</td>
+                            </tr>
+                            <tr>
+                                <th>Sunday</th>
+                                <td>Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
     
                 <div id="infoSection">
-                    <h2>Send us an Email</h2>
+                    <h1>Send us an Email</h1>
                     <form class="contactForm">
                         <fieldset id="patientInfo">
                             <legend>Patient Information</legend>
@@ -77,8 +119,7 @@
                             <div class="formEntry">
                                 <label for="email">Email</label>
                                 <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
-                            </div>
-        
+                            </div>        
                             (*) indicates a required field
                         </fieldset>
                         <fieldset id="patientFeedback">
@@ -87,11 +128,11 @@
                             <textarea name="userExp" id="infoBox"></textarea>            
                         </fieldset>
                     </form>
+                    <div id="buttons">
+                        <input type="submit" value="Submit Details" />
+                        <input type="reset" value="Cancel Details" />
+                    </div>
                 </div>
-            </div>
-            <div id="buttons">
-                <input type="submit" value="Submit Details" />
-                <input type="reset" value="Cancel Details" />
             </div>
         </section>
 

@@ -8,11 +8,6 @@ div#infoSection {
     width: 50%;
 }
 
-div#infoSection h2 {
-    text-align: center;
-    font-size: 1.4em;
-}
-
 form {
     display: -webkit-flex;
     display: flex;

@@ -1,0 +1,60 @@
+/*   
+    COMP 2681 Final Project
+    Author: Sharabhoj Iyengar
+    Filename: table.css
+*/
+
+.schedule {
+    margin-top: 10%;
+    width: 140%;
+    border-collapse: collapse;
+}
+
+.schedule th, td {
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.schedule td:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.schedule caption {
+    margin-top: 10px;
+    caption-side: bottom;
+    color: brown;
+    text-align: right;
+    font-size: 1.2em;
+}
+
+thead {
+    background-color: grey;
+    color: black;
+}
+
+tfoot {
+    background-color: black;
+    color: gray;
+}
+
+tbody {
+    color: wheat;
+}
+
+tbody tr:last-child td {
+    background-color: red;
+}
+
+.dayColumn {
+    background-color: purple;
+}
+
+.hourColumn {
+    background-color: green;
+}
+
+.hourColumn td {
+    background-color: red;
+}
