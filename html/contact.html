@@ -12,15 +12,15 @@
         <link href="../css/reset.css" rel="stylesheet" />
         <link href="../css/media.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" /> 
-        <link href="../css/mobile.css" rel="stylesheet" /> 
         <link href="../css/table.css" rel="stylesheet" />
-        <link href="../css/form.css" rel="stylesheet" />       
+        <link href="../css/form.css" rel="stylesheet" /> 
+        <link href="../css/mobile.css" rel="stylesheet" />       
     </head>
 
     <body>
         <header>
             <a href="index.html"><img src="../media/example_logo_transparent.png" alt="Example Logo" /></a>
-            <nav>
+            <nav> <a id="navicon" href="#"><img src="../media/navicon.png" alt="Navigation Icon"></a>
                 <ul>
                     <li><a class="active" href="contact.html">Contact Us</a></li>
                     <div class="dropdown">
@@ -122,18 +122,18 @@
                                 <label for="email">Email</label>
                                 <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
                             </div>        
-                            (*) indicates a required field
+                            <em>(*) Indicates a required field</em>
                         </fieldset>
                         <fieldset id="patientFeedback">
                             <legend>Feedback</legend>
                             <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
                             <textarea name="userExp" id="infoBox"></textarea>            
                         </fieldset>
+                        <div id="buttons">
+                            <input type="submit" value="Submit Details" />
+                            <input type="reset" value="Cancel Details" />
+                        </div>
                     </form>
-                    <div id="buttons">
-                        <input type="submit" value="Submit Details" />
-                        <input type="reset" value="Cancel Details" />
-                    </div>
                 </div>
             </div>
         </section>

@@ -9,16 +9,68 @@
    ===============================
 */
 @media only screen and (max-width: 480px) {
-    header {
-        top: 0;
+    a#navicon {
+        display: block;
+        float: right;
+        margin-right: 25px;
+        margin-top: 25px;
+        justify-content: center;
+    }
+
+    a#navicon img {
+        height: 50px;
+    }
+
+    header nav ul {
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul li, .dropdown {
+        float: none;
+        display: block;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        padding-left: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    header nav ul li a, .dropdown-content a {
+        text-align: left;
+        width: 100%;
+        display: block;
+    }
+
+    a#navicon:hover+ul, header nav ul:hover {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section h1 {
+        font-size: 1.5em;
+    }
+
+    section > h2 {
+        font-size: 1.2em;
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
     }
 
     body {
+        margin: 0;
         max-width: 100%;
-    }
-
-    nav ul {
-        display: none;
+        max-height: 100%;
     }
 
     .body-content {
@@ -37,7 +89,7 @@
     .box-links a {
         display: block;
         margin: 10px auto;
-        width: 100%;
+        width: 95%;
         text-align: center;
     }
 
@@ -45,7 +97,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
     }
 
     #nav-images img {
@@ -55,7 +106,41 @@
     
     #nav-images .image-text {
         top: 50%;
-    }   
+    }
+    
+    .side-links ul {
+        margin-left: 10px;
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .employee {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employee-info {
+        width: 95%;
+        text-align: left;
+    }
+
+    .grid-container {
+        grid-template-columns: auto;
+    }
+
+    .schedule {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    div#infoSection {
+        width: 100%;
+    }
+
+    .formEntry input, 
+    .formEntry textarea {
+        width: 100%;
+    }
 
     footer {
         flex-direction: column;
