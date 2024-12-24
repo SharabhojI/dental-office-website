@@ -5,9 +5,8 @@
 */
 
 /* ===============================
-   Mobile Styles: 0px to 480px 
-   ===============================
-*/
+   Phone Styles: 0px to 480px 
+   =============================== */
 @media only screen and (max-width: 480px) {
     a#navicon {
         display: block;
@@ -58,6 +57,7 @@
 
     section h1 {
         font-size: 1.5em;
+        margin: 10px 10px;
     }
 
     section > h2 {
@@ -86,6 +86,7 @@
     .split-content img, video {
         width: 100%;
     }
+
     .box-links a {
         display: block;
         margin: 10px auto;
@@ -101,16 +102,11 @@
 
     #nav-images img {
         width: 100%;
-        max-width: 300px;
     }
-    
-    #nav-images .image-text {
-        top: 50%;
-    }
-    
+        
     .side-links ul {
-        margin-left: 10px;
-        margin-top: 20px;
+        width: 100%;
+        margin: 0;
         padding: 0;
     }
 
@@ -151,5 +147,167 @@
     footer div {
         width: 100%;
         margin-bottom: 20px;
+    }
+}
+
+/* ===============================
+   Tablet Styles: 481px to 1024px 
+   =============================== */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    a#navicon {
+        display: block;
+        float: right;
+        margin-right: 25px;
+        margin-top: 25px;
+        justify-content: center;
+    }
+
+    a#navicon img {
+        height: 50px;
+    }
+
+    header nav ul {
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul li, .dropdown {
+        float: none;
+        display: block;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        padding-left: 20px;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    header nav ul li a, .dropdown-content a {
+        text-align: left;
+        width: 100%;
+        display: block;
+    }
+
+    a#navicon:hover+ul, header nav ul:hover {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section > h2 {
+        width: 95%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    body {
+        margin: 0;
+        max-width: 100%;
+        max-height: 100%;
+        font-size: 1.5em;
+    }
+
+    .body-content {
+        width: 95%;
+    }
+
+    .split-content {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .split-content img, video {
+        width: 100%;
+    }
+
+    #nav-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    #nav-images img {
+        width: 100%;
+    }
+
+    .side-links ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .side-links #nav-images {
+        width: 200%;
+    }
+
+    #side-video {
+        width: 200%;
+    }
+
+    #side-video video {
+        width: 100%;
+        height: auto;
+        display: block;  
+        margin: 0 auto;
+    }
+
+    .employee {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .employee img {
+        width: 95%;
+    }
+
+    .employee-info {
+        width: 95%;
+        text-align: left;
+    }
+
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+
+    .schedule {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    div#infoSection {
+        width: 100%;
+    }
+
+    .formEntry input, 
+    .formEntry textarea {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    footer img {
+        width: 50%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    footer div {
+        width: 45%;
+        margin: 10px;
     }
 }
