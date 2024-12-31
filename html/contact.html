@@ -14,7 +14,7 @@
         <link href="../css/styles.css" rel="stylesheet" /> 
         <link href="../css/table.css" rel="stylesheet" />
         <link href="../css/form.css" rel="stylesheet" /> 
-        <link href="../css/mobile.css" rel="stylesheet" />       
+        <link href="../css/mobile.css" rel="stylesheet" />  
     </head>
 
     <body>
@@ -107,27 +107,39 @@
                             <legend>Patient Information</legend>
         
                             <div class="formEntry">
-                                <label for="fName">First Name (*)</label>
+                                <label for="fName">First Name (*):</label>
                                 <input name="firstName" id="fName" type="text" placeholder="Enter your first name" required />
                             </div>
                             <div class="formEntry">
-                                <label for="lName">Last Name (*)</label>
+                                <label for="lName">Last Name (*):</label>
                                 <input name="lastName" id="lName" type="text" placeholder="Enter your last name" required />
                             </div>
                             <div class="formEntry">
-                                <label for="phone">Phone Number (*)</label>
+                                <label for="phone">Phone Number (*):</label>
                                 <input name="patientPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required />
                             </div>
                             <div class="formEntry">
-                                <label for="email">Email</label>
+                                <label for="email">Email:</label>
                                 <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
                             </div>        
                             <em>(*) Indicates a required field</em>
                         </fieldset>
                         <fieldset id="patientFeedback">
                             <legend>Feedback</legend>
-                            <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
-                            <textarea name="userExp" id="infoBox"></textarea>            
+                            <div class="formEntry">
+                                <label>Are you currently a patient with us?</label>
+                                <fieldset id="optGroup">
+                                    <label for="cYes">Yes</label>
+                                    <input name="oCorrect" id="cYes" value="yes" type="radio" />
+                                    <label for="cNo">No</label>
+                                    <input name="oCorrect" id="cNo" value="no" type="radio" />
+                                </fieldset>
+                            </div>
+                            <div class="formEntry"></div>
+                            <div id="textboxEntry">
+                                <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
+                                <textarea name="userExp" id="infoBox"></textarea>    
+                            </div>        
                         </fieldset>
                         <div id="buttons">
                             <input type="submit" value="Submit Details" />

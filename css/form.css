@@ -4,10 +4,6 @@
     Filename: form.css
 */
 
-div#infoSection {
-    width: 50%;
-}
-
 form {
     display: -webkit-flex;
     display: flex;
@@ -26,6 +22,14 @@ form > fieldset {
     margin: 20px;
 }
 
+fieldset#optGroup {
+    flex: 1 1 200px;
+    display: flex;
+    gap: 2px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 div.formEntry {
     display: -webkit-flex;
     display: flex;
@@ -37,6 +41,15 @@ div.formEntry {
 div.formEntry > * {
     -webkit-flex: 1 1 200px;
     flex: 1 1 200px;
+}
+
+div#textboxEntry {
+    margin-left: 8px;
+    margin-right: 16px;
+}
+
+div#infoSection {
+    width: 50%;
 }
 
 div#buttons {

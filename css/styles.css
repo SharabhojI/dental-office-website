@@ -191,6 +191,11 @@ blockquote {
     background-color: rgb(132, 172, 158);
     color: whitesmoke;
     text-align: center;
+    background-image: url('../media/open_quote.gif');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-clip: border-box;
 }
 
 .employee {
@@ -349,4 +354,11 @@ footer a:hover {
     padding-top: 20px;
     background-color: whitesmoke;
     color: darkgrey;
+}
+
+div#office-status, div#date-time {
+    color: brown;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style: italic;
 }
