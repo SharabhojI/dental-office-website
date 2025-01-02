@@ -11,12 +11,19 @@ const officeHours = {
 
 // function to format opening and closing hours
 function formatTime(hour) {
-    const amPm = hour >= 12 ? "PM" : "AM";
+    const timeOfDay = hour >= 12 ? "PM" : "AM";
     const formattedHour = hour > 12 ? hour - 12 : hour;
-    return `${formattedHour}:00 ${amPm}`;
+    return `${formattedHour}:00 ${timeOfDay}`;
 }
 
 function displayOfficeStatus() {
+    // Check if necessary elements exist (homepage)
+    const dateTimeElement = document.getElementById("date-time");
+    const officeStatusElement = document.getElementById("office-status");
+    
+    if (!dateTimeElement || !officeStatusElement) {
+        return; // break out of function as elements don't exist
+    }
     var currentDay = new Date();
     var dateString = currentDay.toLocaleDateString();
     var timeString = currentDay.toLocaleTimeString();
@@ -40,7 +47,7 @@ function displayOfficeStatus() {
         let nextOpenTime;
         let message;
 
-        // if past today's closing time
+        // if past today"s closing time
         if (currentTime >= officeHours[dayOfWeek].close) {
             let nextDay = (dayOfWeek + 1) % 7;
             // if office is closed the next day
@@ -60,5 +67,57 @@ function displayOfficeStatus() {
     }
 }
 
-displayOfficeStatus();
-setInterval("displayOfficeStatus()", 1000); // update every second
+function validateForm(e) {
+    // Get form values
+    const firstName = document.getElementById("fName").value.trim();
+    const lastName = document.getElementById("lName").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    
+    // Check required fields
+    if (!firstName) {
+        e.preventDefault();
+        alert("Please enter your first name");
+        return false;
+    }
+    
+    if (!lastName) {
+        e.preventDefault();
+        alert("Please enter your last name");
+        return false;
+    }
+    
+    if (!phone) {
+        e.preventDefault();
+        alert("Please enter your phone number");
+        return false;
+    }
+    
+    // Basic phone validation (must be 10 digits)
+    const phoneDigits = phone.replace(/\D/g, "");
+    if (phoneDigits.length !== 10) {
+        e.preventDefault();
+        alert("Phone number must be 10 digits long");
+        return false;
+    }
+    
+    // Basic email validation (if provided)
+    if (email && !email.includes("@")) {
+        e.preventDefault();
+        alert("Please enter a valid email address");
+        return false;
+    }
+    
+    return true;
+}
+
+// Wrap everything in DOMContentLoaded
+document.addEventListener('DOMContentLoaded', function() {
+    displayOfficeStatus();
+    setInterval(displayOfficeStatus, 1000); // Fixed string to function reference
+    
+    const form = document.querySelector(".contactForm");
+    if (form) {
+        form.addEventListener("submit", validateForm);
+    }
+});

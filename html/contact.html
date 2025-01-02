@@ -14,12 +14,13 @@
         <link href="../css/styles.css" rel="stylesheet" /> 
         <link href="../css/table.css" rel="stylesheet" />
         <link href="../css/form.css" rel="stylesheet" /> 
-        <link href="../css/mobile.css" rel="stylesheet" />  
+        <link href="../css/mobile.css" rel="stylesheet" /> 
+        <script src="../javascript/script.js" defer></script> 
     </head>
 
     <body>
         <header>
-            <a href="index.html"><img src="../media/example_logo_transparent.png" alt="Example Logo" /></a>
+            <a href="index.html"><img src="../media/dental-logo-removebg.png" alt="Office Logo" /></a>
             <nav> <a id="navicon" href="#"><img src="../media/navicon.png" alt="Navigation Icon"></a>
                 <ul>
                     <li><a class="active" href="contact.html">Contact Us</a></li>
@@ -48,14 +49,61 @@
 
         <section id="contactSection">
             <div class="split-content">
+                <div id="infoSection">
+                    <h1>Send us an Email</h1>
+                    <form class="contactForm">
+                        <fieldset id="patientInfo">
+                            <legend>Patient Information</legend>
+        
+                            <div class="formEntry">
+                                <label for="fName">First Name (*):</label>
+                                <input name="firstName" id="fName" type="text" placeholder="Enter your first name" required />
+                            </div>
+                            <div class="formEntry">
+                                <label for="lName">Last Name (*):</label>
+                                <input name="lastName" id="lName" type="text" placeholder="Enter your last name" required />
+                            </div>
+                            <div class="formEntry">
+                                <label for="phone">Phone Number (*):</label>
+                                <input name="patientPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^\(\d{3}\)\s\d{3}-\d{4}$" required />
+                            </div>
+                            <div class="formEntry">
+                                <label for="email">Email (optional):</label>
+                                <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
+                            </div>        
+                            <em>(*) Indicates a required field</em>
+                        </fieldset>
+                        <fieldset id="patientFeedback">
+                            <legend>Feedback</legend>
+                            <div class="formEntry">
+                                <label>Are you currently a patient with us?</label>
+                                <fieldset id="optGroup">
+                                    <label for="cYes">Yes</label>
+                                    <input name="oCorrect" id="cYes" value="yes" type="radio" />
+                                    <label for="cNo">No</label>
+                                    <input name="oCorrect" id="cNo" value="no" type="radio" />
+                                </fieldset>
+                            </div>
+                            <div class="formEntry"></div>
+                            <div id="textboxEntry">
+                                <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
+                                <textarea name="userExp" id="infoBox"></textarea>    
+                            </div>        
+                        </fieldset>
+                        <div id="buttons">
+                            <input type="submit" value="Submit Details" />
+                            <input type="reset" value="Cancel Details" />
+                        </div>
+                    </form>
+                </div>
+
                 <div class="body-content">
-                    <h1>Our Schedule</h1>
                     <table class="schedule">
                         <colgroup>
                             <col class="dayColumn" />
                             <col class="hourColumn" />
                         </colgroup>
-                        <caption><em>All times EST</em></caption>
+                        <caption><em>Schedule - All times EST</em></caption>
                         <thead>
                             <tr>
                                 <th>Day</th>
@@ -98,61 +146,20 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-    
-                <div id="infoSection">
-                    <h1>Send us an Email</h1>
-                    <form class="contactForm">
-                        <fieldset id="patientInfo">
-                            <legend>Patient Information</legend>
-        
-                            <div class="formEntry">
-                                <label for="fName">First Name (*):</label>
-                                <input name="firstName" id="fName" type="text" placeholder="Enter your first name" required />
-                            </div>
-                            <div class="formEntry">
-                                <label for="lName">Last Name (*):</label>
-                                <input name="lastName" id="lName" type="text" placeholder="Enter your last name" required />
-                            </div>
-                            <div class="formEntry">
-                                <label for="phone">Phone Number (*):</label>
-                                <input name="patientPhone" id="phone" type="text" placeholder="(nnn) nnn-nnnn" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" required />
-                            </div>
-                            <div class="formEntry">
-                                <label for="email">Email:</label>
-                                <input name="patientEmail" id="email" type="text" placeholder="name@example.com" />
-                            </div>        
-                            <em>(*) Indicates a required field</em>
-                        </fieldset>
-                        <fieldset id="patientFeedback">
-                            <legend>Feedback</legend>
-                            <div class="formEntry">
-                                <label>Are you currently a patient with us?</label>
-                                <fieldset id="optGroup">
-                                    <label for="cYes">Yes</label>
-                                    <input name="oCorrect" id="cYes" value="yes" type="radio" />
-                                    <label for="cNo">No</label>
-                                    <input name="oCorrect" id="cNo" value="no" type="radio" />
-                                </fieldset>
-                            </div>
-                            <div class="formEntry"></div>
-                            <div id="textboxEntry">
-                                <label for="infoBox">Please leave any comments, questions, or concerns below.</label>
-                                <textarea name="userExp" id="infoBox"></textarea>    
-                            </div>        
-                        </fieldset>
-                        <div id="buttons">
-                            <input type="submit" value="Submit Details" />
-                            <input type="reset" value="Cancel Details" />
-                        </div>
-                    </form>
+                    <div id="embed-map">
+                        <iframe 
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-79.66053485870363%2C43.58590876030973%2C-79.63221073150636%2C43.599336138960346&amp;layer=mapnik" 
+                            style="border: 1px solid black">
+                        </iframe>
+                        <br/><small><a href="https://www.openstreetmap.org/#map=16/43.59262/-79.64637">View Larger Map</a></small>
+                    </div>
                 </div>
             </div>
         </section>
 
         <footer>
             <div>
-                <a href="index.html"><img src="../media/example_logo_transparent.png" alt="Example Logo" /></a>
+                <a href="index.html"><img src="../media/dental-logo-removebg.png" alt="Office Logo" /></a>
             </div>
             <div>
                 <h4>Central Mississauga Dental</h4>

@@ -10,10 +10,11 @@ form {
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
     color: white;
+    margin-left: -4%;
 }
 
 form > fieldset {
-    background-color: olive;
+    background-color: gray;
     border-radius: 15px;
     -webkit-flex: 1 1 400px;
     flex: 1 1 400px;

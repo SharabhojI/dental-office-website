@@ -127,6 +127,11 @@
     .schedule {
         width: 100%;
         margin-top: 20px;
+        margin-left: 0%;
+    }
+
+    div#embed-map {
+        margin-left: 0%;
     }
 
     div#infoSection {
@@ -281,6 +286,11 @@
     .schedule {
         width: 100%;
         margin-top: 20px;
+        margin-left: 0%;
+    }
+
+    div#embed-map {
+        margin-left: 0%;
     }
 
     div#infoSection {

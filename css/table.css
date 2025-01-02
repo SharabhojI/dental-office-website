@@ -5,9 +5,9 @@
 */
 
 .schedule {
-    margin-top: 10%;
     width: 140%;
     border-collapse: collapse;
+    margin-left: -40%;
 }
 
 .schedule th, td {
