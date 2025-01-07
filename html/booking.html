@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--    
+            COMP 2681 Final Project
+            Author: Sharabhoj Iyengar
+            Filename: booking.html
+        -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Book an Appointment</title>
+        <link href="../css/reset.css" rel="stylesheet" />
+        <link href="../css/media.css" rel="stylesheet" />
+        <link href="../css/styles.css" rel="stylesheet" /> 
+        <link href="../css/table.css" rel="stylesheet" />
+        <link href="../css/form.css" rel="stylesheet" /> 
+        <link href="../css/mobile.css" rel="stylesheet" /> 
+        <script src="../javascript/script.js" defer></script> 
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html"><img src="../media/dental-logo-removebg.png" alt="Office Logo" /></a>
+            <nav> <a id="navicon" href="#"><img src="../media/navicon.png" alt="Navigation Icon"></a>
+                <ul>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a class="active" href="booking.html">Booking</a></li>
+                    <div class="dropdown">
+                        <li><a href="services.html">Our Services</a></li>
+                        <div class="dropdown-content">
+                            <a href="general-dentistry.html">General Dentistry</a>
+                            <a href="childrens-dentistry.html">Children's Dentistry</a>
+                            <a href="cosmetic-dentistry.html">Cosmetic Dentistry</a>
+                            <a href="dental-implants.html">Dental Implants</a>                            
+                            <a href="dental-sedation.html">Dental Sedation</a>
+                            <a href="emergency-dentistry.html">Emergency Dentistry</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="about.html">About Us</a></li>
+                        <div class="dropdown-content">
+                            <a href="dentists.html">Our Dentists</a>
+                            <a href="team.html">Our Team</a>
+                        </div>
+                    </div>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section>
+            <h1>Book an Appointment</h1>
+            <div class="split-content" id="bookingSection">
+                <form class="contactForm">
+                    <fieldset id="patientInfo">
+                        <legend>Personal Information</legend>
+    
+                        <div class="formEntry">
+                            <label for="fName">First Name (*):</label>
+                            <input name="firstName" id="fName" type="text" placeholder="e.g. John" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="lName">Last Name (*):</label>
+                            <input name="lastName" id="lName" type="text" placeholder="e.g. Smith" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="phone">Phone Number (*):</label>
+                            <input name="patientPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn" 
+                                   pattern="^\d{10}$|^\(\d{3}\)\s\d{3}-\d{4}$" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="email">Email (*):</label>
+                            <input name="patientEmail" id="email" type="text" placeholder="name@example.com" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="dob">Date of Birth (*):</label>
+                            <input name="dob" id="dob" type="date" required />
+                        </div>
+                        <div class="formEntry">
+                            <label for="insurance">Insurance Provider:</label>
+                            <input name="insurance" id="insurance" type="text" placeholder="e.g. Sun Life" />
+                        </div>
+                        <div class="formEntry">
+                            <label for="policy">Policy Number:</label>
+                            <input name="policy" id="policy" type="text" placeholder="e.g. ABC123456" />
+                        </div>        
+                        <em>(*) Indicates a required field</em>
+                    </fieldset>
+                    <fieldset id="patientFeedback">
+                        <legend>Appointment Details</legend>
+                        <div class="formEntry">
+                            <label for="service">Service Type (*):</label>
+                            <select name="service" id="service" required>
+                                <option value="">Select a service</option>
+                                <option value="general">General Check-up & Cleaning</option>
+                                <option value="children">Children's Dentistry</option>
+                                <option value="cosmetic">Cosmetic Dentistry</option>
+                                <option value="implants">Dental Implants</option>
+                                <option value="sedation">Dental Sedation</option>
+                                <option value="emergency">Emergency Dentistry</option>
+                            </select>
+                        </div>
+                        <div class="formEntry">
+                            <label for="date">Preferred Date (*):</label>
+                            <input type="date" id="date" name="appointmentDate" required min="2024-01-07" />
+                        </div>
+                        <div class="formEntry">
+                            <label for="time">Preferred Time (*):</label>
+                            <select name="time" id="time" required>
+                                <option value="">Select a time</option>
+                                <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
+                                <option value="evening">Evening (4:00 PM - 7:00 PM)</option>
+                            </select>
+                        </div>
+                        <div class="formEntry">
+                            <label>Are you a new patient?</label>
+                            <fieldset id="optGroup">
+                                <label for="pYes">Yes</label>
+                                <input name="newPatient" id="pYes" value="yes" type="radio" />
+                                <label for="pNo">No</label>
+                                <input name="newPatient" id="pNo" value="no" type="radio" />
+                            </fieldset>
+                        </div>
+                        <div class="formEntry">
+                            <div id="textboxEntry">
+                                <label for="infoBox">Please describe your dental concerns or special requirements:</label>
+                                <textarea name="concerns" id="infoBox"></textarea>    
+                            </div>
+                        </div>        
+                    </fieldset>
+                    <div class="buttons">
+                        <input type="submit" value="Book Appointment" />
+                        <input type="reset" value="Clear Form" />
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div>
+                <a href="index.html"><img src="../media/dental-logo-removebg.png" alt="Office Logo" /></a>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="../media/facebook-logo.png" alt="Facebook Icon" /></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="../media/instagram-logo.png" alt="Instagram Icon" /></a>
+                </div>
+            </div>
+            <div>
+                <h4>Central Mississauga Dental</h4>
+                <p>123 Example Ave. Unit 1</p> 
+                <p>Mississauga, ON</p>
+                <h4>Phone Number</h4>
+                <p><a href="tel:9059059055">(905) 905-9055</a></p>
+            </div>
+            <div>
+                <h4>Hours Of Operation</h4>
+                <p>Monday: 9:00 am - 7:00 pm</p> 
+                <p>Tuesday: 9:00 am - 7:00 pm</p> 
+                <p>Wednesday: 9:00 am - 7:00 pm</p> 
+                <p>Thursday: 9:00 am - 7:00 pm</p> 
+                <p>Friday: 10:00 am - 5:00 pm</p> 
+                <p>Saturday: 12:00 pm - 4:00 pm</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -134,7 +134,12 @@
         margin-left: 0%;
     }
 
-    div#infoSection {
+    div#bookingSection {
+        margin: 0px;
+        width: 100%;
+    } 
+    
+    div#contactSection {
         width: 100%;
     }
 
@@ -168,7 +173,8 @@
     }
 
     a#navicon img {
-        height: 50px;
+        height: 60px;
+        margin-top: -10px;
     }
 
     header nav ul {
@@ -254,15 +260,15 @@
         width: 200%;
     }
 
-    #side-video {
-        width: 200%;
-    }
-
-    #side-video video {
-        width: 100%;
+    #side-media video {
+        width: auto;
         height: auto;
         display: block;  
         margin: 0 auto;
+    }
+
+    #side-media audio {
+        width: 100%;
     }
 
     .employee {
@@ -293,7 +299,12 @@
         margin-left: 0%;
     }
 
-    div#infoSection {
+    div#bookingSection {
+        margin: 0px;
+        width: 100%;
+    } 
+    
+    div#contactSection {
         width: 100%;
     }
 

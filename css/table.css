@@ -8,21 +8,30 @@
     width: 140%;
     border-collapse: collapse;
     margin-left: -40%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .schedule th, td {
-    padding: 10px;
-    border: 2px solid black;
-    text-align: center;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.schedule td {
+    color: #333;
+    background-color: white;
+    transition: background-color 0.5s ease;
 }
 
 .schedule td:hover {
-    background-color: greenyellow;
-    color: black;
+    background-color: #f5f5f5;
+    color: brown;
 }
 
 .schedule caption {
-    margin-top: 10px;
     caption-side: bottom;
     color: brown;
     text-align: right;
@@ -30,31 +39,35 @@
 }
 
 thead {
-    background-color: grey;
-    color: black;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+thead th {
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 tfoot {
-    background-color: black;
-    color: gray;
+    background-color: #f8f8f8;
+    color: #666;
+    font-style: italic;
 }
 
-tbody {
-    color: wheat;
+tfoot th {
+    font-weight: normal;
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tbody tr:last-child {
+    color: #d32f2f;
+    font-style: italic;
 }
 
 tbody tr:last-child td {
-    background-color: red;
-}
-
-.dayColumn {
-    background-color: purple;
-}
-
-.hourColumn {
-    background-color: green;
-}
-
-.hourColumn td {
-    background-color: red;
+    background-color: #fff5f5;
 }

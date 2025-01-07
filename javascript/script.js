@@ -47,7 +47,7 @@ function displayOfficeStatus() {
         let nextOpenTime;
         let message;
 
-        // if past today"s closing time
+        // if past today's closing time
         if (currentTime >= officeHours[dayOfWeek].close) {
             let nextDay = (dayOfWeek + 1) % 7;
             // if office is closed the next day
@@ -93,7 +93,7 @@ function validateForm(e) {
         return false;
     }
     
-    // Basic phone validation (must be 10 digits)
+    // Basic phone validation (ensure that phone number 10 digits)
     const phoneDigits = phone.replace(/\D/g, "");
     if (phoneDigits.length !== 10) {
         e.preventDefault();
@@ -111,10 +111,57 @@ function validateForm(e) {
     return true;
 }
 
-// Wrap everything in DOMContentLoaded
+function initCarousel() {
+    const carousel = document.querySelector('.carousel');
+    if (!carousel) return; // Break out of function if carousel doesn't exist
+
+    const items = carousel.querySelectorAll('.carousel-item');
+    const dotsContainer = carousel.querySelector('.carousel-dots');
+    let currentIndex = 0;
+
+    // Create dots
+    items.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.dot');
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // Go to slide by index (i.e. when clicking on a dot)
+    function goToSlide(index) {
+        items[currentIndex].classList.remove('active');
+        currentIndex = index;
+        items[currentIndex].classList.add('active');
+        updateDots();
+    }
+
+    function nextSlide() {
+        goToSlide((currentIndex + 1) % items.length);
+    }
+
+    function prevSlide() {
+        goToSlide((currentIndex - 1 + items.length) % items.length);
+    }
+
+    carousel.querySelector('.next').addEventListener('click', nextSlide);
+    carousel.querySelector('.prev').addEventListener('click', prevSlide);
+
+    // Auto advance every 10 seconds
+    setInterval(nextSlide, 10000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     displayOfficeStatus();
-    setInterval(displayOfficeStatus, 1000); // Fixed string to function reference
+    initCarousel();
+    setInterval(displayOfficeStatus, 1000);
     
     const form = document.querySelector(".contactForm");
     if (form) {
