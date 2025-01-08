@@ -2,6 +2,8 @@
 
 A responsive, multi-page website developed using modern web development practices and vanilla JavaScript.
 
+Site is live at [https://sharabhoji.github.io/dental-office-website/](https://sharabhoji.github.io/dental-office-website/)
+
 ## Technologies & Features
 
 ### Core Technologies
@@ -25,8 +27,9 @@ A responsive, multi-page website developed using modern web development practice
 
 ### JavaScript Features
 - Real-time office hours tracker
-- Form validation (to be implemented)
+- Form validation
 - Time-based content display
+- Image carousel for site navigation
 
 ## Project Structure
 ```
