@@ -1,9 +1,3 @@
-/*   
-    COMP 2681 Final Project
-    Author: Sharabhoj Iyengar
-    Filename: styles.css
-*/
-
 html {
     background-color: rgb(220, 220, 220);
 }
@@ -197,7 +191,8 @@ blockquote {
     background-color: gray;
     color: whitesmoke;
     text-align: center;
-    border: 10px solid gray;
+    border: 14px solid gray;
+    border-radius: 10px;
     background-image: url('../media/open_quote.gif');
     background-position: top left;
     background-repeat: no-repeat;
@@ -381,4 +376,24 @@ div#office-status, div#date-time {
     padding: 20px 20px 20px;
     background-color: whitesmoke;
     color: darkgrey;
+}
+
+#reference-sites h2, #requirement-features h2, #docs h2 {
+    color: brown;
+    font-size: 1.2em;
+    margin: 20px -20px 0px;
+}
+
+#reference-sites ol li, #requirement-features ol li {
+    margin: 10px 0;
+}
+
+#reference-sites ol li a, #requirement-features ol li a, .embed-docs a {
+    color: rgb(65, 65, 255);
+    text-decoration: underline;
+}
+
+.embed-docs {
+    margin-left: -20px;
+    line-height: 1.6em;
 }

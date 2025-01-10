@@ -1,9 +1,3 @@
-/*   
-    COMP 2681 Final Project
-    Author: Sharabhoj Iyengar
-    Filename: table.css
-*/
-
 .schedule {
     width: 140%;
     border-collapse: collapse;
@@ -63,7 +57,16 @@ tbody tr:nth-child(even) {
     background-color: #fafafa;
 }
 
-tbody tr:last-child {
+tbody tr:first-of-type {
+    color: #6ece56;
+    font-style: italic;
+}
+
+tbody tr:first-child td {
+    background-color: #e1fad9;
+}
+
+tbody tr:last-of-type {
     color: #d32f2f;
     font-style: italic;
 }
