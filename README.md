@@ -57,7 +57,7 @@ project/
     ├── dental-implants.html
     ├── dental-sedation.html
     ├── emergency-dentistry.html
-    └── contact.html
+    ├── contact.html
     └── booking.html
 ```
 
