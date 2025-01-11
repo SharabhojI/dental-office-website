@@ -58,15 +58,17 @@ project/
     ├── dental-sedation.html
     ├── emergency-dentistry.html
     └── contact.html
+    └── booking.html
 ```
 
 ## Key Components
 - Responsive navigation with dropdowns
-- Contact form with validation
+- Contact and booking form with validation
 - Dynamic office hours display
 - Grid-based service cards with hover effects
 - Mobile-friendly collapsible menu
 - Responsive images and video content
+- Embedded OpenStreetMap
 
 ## Browser Support
 - Modern browsers (Chrome, Firefox, Safari, Edge - latest versions)
